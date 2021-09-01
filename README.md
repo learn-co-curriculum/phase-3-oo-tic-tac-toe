@@ -1,9 +1,8 @@
 # OO Tic Tac Toe
 
-## Objectives
+## Learning Goals
 
-1. Build a CLI Tic Tac Toe game!
-2. Encapsulate Tic Tac Toe in a `TicTacToe` object.
+- Use Object Oriented Programming to build a CLI Tic Tac Toe game
 
 ## Overview
 
