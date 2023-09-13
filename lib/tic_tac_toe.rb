@@ -56,10 +56,32 @@ class TicTacToe
         # while !valid_move?(input) do
         #     turn
         # end
-        # valid_move?(input)
         # move(input, current_player)
         # display_board
     end
 
-    
+    def won?
+        WIN_COMBINATIONS.find do |combo|
+            @board[combo[0]] == @board[combo[1]] &&
+            @board[combo[1]] == @board[combo[2]] &&
+            position_taken?(combo[0])
+        end
+    end
+
+    def full?
+        @board.all? {|token| token != " "}
+    end
+
+    def draw?
+        !won? && full?
+    end
+
+    def over?
+        won? || full? || draw?
+    end
+
+    def winner
+        won? ? @board[won?[0]] : nil
+    end
+
 end
